@@ -1,0 +1,110 @@
+/* Set up the page layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  background-image: url("https://www.weather.gov/images/fwd/WarmRainCloud.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  text-decoration: #9e77ff;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  text-align: center;
+  
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 36px;
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 50%;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-decoration-color: aqua;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+.popup-container {
+  position: relative;
+  margin-top: 20px;
+}
+/* Set up the popup */
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 999;
+}
+
+.popup.show {
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Add a gradient background to the popup */
+.popup-content {
+  background: linear-gradient(45deg, #9e77ff, #04befe);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Add a pulsating animation to the button */
+button {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
